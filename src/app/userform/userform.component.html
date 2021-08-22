@@ -1,0 +1,35 @@
+<app-suphead></app-suphead>
+<div class="banner ">
+    <div class="container" style="width: 28%;margin-bottom: 7%;">
+        <div class="row  sign ">
+          <!-- <img src="./assets/images/home.png" alt="Logo" style="width:500px; margin-top: 50px;"> -->
+        <div class="col-md-12 col-md-offset-0">
+      <div>
+        <form  #userlogin="ngForm" style="margin-top: 150px;"  name="form" (ngSubmit)="makeadmin()">
+            
+              <div class="form-group mt-3 pl-2 pr-2 ">
+              <label >Name</label>
+               <input type="text" class="form-control" name="name" id="name" #name="ngModel" [(ngModel)]="userItem.name" maxlength="32"  [class.is-invalid]="name.invalid && name.touched" pattern="[A-Za-z ]{1,32}" placeholder=" Enter alphabet characters only" required autocomplete="off">  
+               
+              </div>
+              
+            <div class="form-group pl-2 pr-2 mt-3">
+              <label>Email address</label>
+              <input type="text" class="form-control" name="email" id="email" placeholder="Your Email *" #email="ngModel" [(ngModel)]="userItem.email" [class.is-invalid]="email.invalid && email.touched" pattern="^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$"  required>
+                              
+                            
+              
+            </div>
+                   
+              
+              <div class="form-group text-center  mb-4">
+            <button type="submit" class="btn btn-warning  btn-lg " name="" [disabled]="userlogin.form.invalid">Make admin</button>
+         </div>
+          </form>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  

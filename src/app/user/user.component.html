@@ -1,0 +1,34 @@
+<app-suphead></app-suphead>
+<div class='card'>
+    <div class='card-header'>
+        {{title}}
+    </div>
+<div class='card-body'>
+    <div class="table responsive col-md-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    
+                    
+                    <th>Name</th>
+                    <th>Email</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let user of userlist'>
+                    
+                   
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        
+                      <button class="btn btn-warning" style="cursor:pointer"  (click)="admin(user)" style="margin-left: 20px;margin-right: 20px;">Make admin</button>
+                      <button class="btn btn-danger" style="cursor:pointer" (click)="deleteUser(user)"> Delete</button>
+                    </td>
+                  </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

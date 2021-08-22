@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="banner text-center">
+  <div class="container" style="width: 28%;margin-bottom: 7%;">
+      <div class="row  sign ">
+        <!-- <img src="./assets/images/home.png" alt="Logo" style="width:500px; margin-top: 50px;"> -->
+      <div class="col-md-12 col-md-offset-0">
+    <div>
+      <form  #userlogin="ngForm" style="margin-top: 200px;" (ngSubmit)="loginUser()">
+          
+            
+          <div class="form-group pl-2 pr-2 mt-3">
+            <label>Email address</label>
+            <input type="text" class="form-control" name="email" id="email" #email="ngModel" [(ngModel)]="userItem.email" [class.is-invalid]="email.invalid && email.touched" pattern="^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$" placeholder="Enter valid email" required >
+            
+            
+          </div>
+          <div class="form-group pl-2 pr-2 mt-3">
+            <label >Password</label>
+            <input type="password" class="form-control" name="password" id="pass" #pass="ngModel" minlength="6"  [(ngModel)]="userItem.password" [class.is-invalid]="pass.invalid && pass.touched" placeholder="Minimum 6 characters" required autocomplete="off">
+               
+          </div>        
+            <!-- <div class="form-group pl-2 pr-2 mt-3">
+              <label >Phone Number</label>
+              <input type="text" class="form-control" name="phone" id="phone" #phone="ngModel"  [class.is-invalid]="phone.invalid && phone.touched" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" [(ngModel)]="userItem.phone" placeholder="please enter 10 numbers" required autocomplete="off">
+            </div> -->
+            <div class="form-group text-center  mb-4">
+          <button type="submit" class="btn btn-warning  btn-lg " name="" [disabled]="userlogin.form.invalid">LogIn</button>
+       </div>
+        </form>
+      
+  </div>
+  </div>
+  </div>
+  </div>
+</div>

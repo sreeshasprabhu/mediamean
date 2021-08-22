@@ -1,0 +1,25 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: center;
+}
+.left{
+    background-color: rgba(130, 191,245, 0.568);
+    width: 20%;
+    height: 610px;
+    border-radius: 10px;
+    padding:20px;
+    margin:10px;
+}
+.right{
+    background-color: rgba(130, 191,245, 0.568);
+    width:75%;
+    height: 600px;
+    border-radius: 10px;
+    padding:20px;
+    margin:auto;
+}
+a{
+    text-decoration: none;
+}
